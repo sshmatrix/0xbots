@@ -8,3 +8,6 @@ IPNS: [0xbots.eth](https://0xbots.eth.link)
 
 <img src="https://ipfs.io/ipfs/QmPAgTjSGvHC18F4rH1RUKWAsGJmviDpSxiSzbVfMXiwMh?filename=ETHGlobalHack.png" alt="drawing" width="720"/>
 
+### Schematic
+
+<img src="https://ipfs.io/ipfs/QmWTPTC5y8So4qiEpqESLV6EWop7atpvhB1pP31ubX7ygL?filename=Schematic.png" alt="drawing" width="720"/>
