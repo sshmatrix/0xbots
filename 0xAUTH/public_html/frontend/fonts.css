@@ -13,11 +13,7 @@ code {
 
 @font-face {
   font-family: 'SF-Pro';
-  src: url('./SF-Pro-Rounded-Regular-Web.woff2') format('woff2'),
-    url('./SF-Pro-Rounded-Regular-Web.woff') format('woff'),
-    url('./SF-Pro-Rounded-Regular-Web.eot') format('eot'),
-    url('./SF-Pro-Rounded-Regular-Web.svg') format('svg'),
-    url('./SF-Pro-Rounded-Regular-Web.ttf') format('truetype');
+  src: url('./SF-Pro-Rounded-Regular-Web.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;

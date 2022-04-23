@@ -21,8 +21,7 @@ const PORT = 3001;
 
 app.use(cors({
 	origin: [
-						'https://0xbots.eth.limo',
-						'https://0xbots.eth.link'
+						'https://work.inpl.one'
 					],
 	credentials: true,
 }));

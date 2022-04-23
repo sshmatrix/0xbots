@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: 'SF-Pro';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'SF-Pro';
+}
+
+/*Fonts*/
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('./SF-Pro-Rounded-Regular-Web.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.Graphik-Regular-Web {
+  font-family: 'SF-Pro';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}

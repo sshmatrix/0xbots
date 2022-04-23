@@ -18,7 +18,7 @@ module.exports = {
   },
   externals: {
     'Config': JSON.stringify(process.env.NODE_ENV === 'production' ? {
-      serverUrl: "https://inpl.one:3001"
+      serverUrl: "https://work.inpl.one:3001"
     } : {
       serverUrl: "http://localhost:3000"
     })

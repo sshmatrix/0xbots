@@ -4,13 +4,12 @@
   background-color: #000000;
   text-align: center;
   background-repeat: no-repeat;
-  background-image: url('./background.gif');
   background-size: cover;
   background-position: top;
 }
 
 .app-logo {
-  background-image: url('./logo.gif');
+  background-image: url('./logo.png');
   height: 150px;
   pointer-events: none;
   background-repeat: no-repeat;

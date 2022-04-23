@@ -15,7 +15,7 @@ const ensContainerElm = document.getElementById('ensContainer');
 const ensTableElm = document.getElementById('ensTable');
 
 const ensAddress = "https://api.thegraph.com/subgraphs/name/ensdomains/ens";
-const tablePrefix = `<tr><th>ENS Text Key</th><th>Value</th></tr>`;
+const tablePrefix = `<tr><th> </th><th> </th></tr>`;
 
 let address;
 
@@ -81,7 +81,7 @@ async function getENSMetadata(ensName) {
         nextProfile += `<tr><td>${textKeys[i]}:</td><td>${await resolver.getText(textKeys[i])}</td></tr>`
     }
 
-    return tablePrefix + nextProfile
+    return tablePrefix
 }
 
 async function signInWithEthereum() {
@@ -92,7 +92,7 @@ async function signInWithEthereum() {
     address = await signer.getAddress()
     const message = await createSiweMessage(
         address,
-        'Sign-in with Ethereum to Interplanetary Company'
+        'Thank you for computing with 0xBOTS!'
     );
     const signature = await signer.signMessage(message);
 
