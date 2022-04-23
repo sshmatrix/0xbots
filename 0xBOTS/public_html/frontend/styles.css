@@ -3,7 +3,7 @@
   color:#ffffff;
   background-color: #000000;
   text-align: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
   background-position: top;
 }
@@ -991,6 +991,9 @@ hr {
 body {
 	margin: 0;
 	font-family: 'Rajdhani';
+  padding-bottom: 300px;
+  background-color: #000000;
+  background-repeat: repeat-y;
 }
 #navigation {
 	position: fixed;

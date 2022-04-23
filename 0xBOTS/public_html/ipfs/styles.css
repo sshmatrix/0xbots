@@ -9,13 +9,17 @@
 }
 
 .app-logo {
-  background-image: url('./logo.png');
+  background-image: url('https://ipfs.io/ipfs/QmYfwj3uRzwH9ih2VMFtbUD9tGmZBSN4aQyXFAmswWLHpv');
   height: 150px;
   pointer-events: none;
   background-repeat: no-repeat;
   background-size: 150px;
   width: 150px;
   margin-left: 100px;
+}
+
+.externalSearcher iframe {
+    display: none;
 }
 
 .avatar {

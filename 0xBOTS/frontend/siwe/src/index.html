@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <title>0xBOTS.eth</title>
   <meta charset="utf-8" />
   <style>
     .hidden {
@@ -26,21 +27,26 @@
   <div class="app" >
     <div class="app-logo"></div>
     <div class="main-container">
+
       <div class="login-wrapper" >
         <h1 style="margin-top:-160px;font-weight:200;">DEMO</h1>
         <img style="width:200px; margin-top:-20px;" src="./Art.gif">
       </div><br>
-      <p>Click below to generate a random job</p>
+      <div class="form-group">
+        <input id="userdata" class="form-control" style="width: 300px;">
+      </div>
+
+      <p style="color: skyblue;">Type Python command(s) and click below to generate job (e.g. 'a = 2 + 4; print(a)')</p>
       <br><br><br><br>
       <div style="margin-top:-85px; margin-left:'auto'; margin-right:0px;"><button id="genJobButton" class="button-outline-menu connect">Generate Job</button></div>
-      <br><br><br>
-      <p>Connect Wallet & Sign-in with Ethereum to accept compute request</p>
-      <div style="margin-top:-5px; margin-left:'auto'; margin-right:0px;"><button id="connectWalletButton" class="button-outline-menu connect">Connect wallet</button></div>
-      <div style="margin-top:5px; margin-left:'auto'; margin-right:0px;"><button id="siweButton" class="button-outline-menu siwe">Sign-in with <img class="thumbnailsiwe" src="./siwe.png"></button></div>
+      <br>
+      <div class="hidden" id="genJob"></div>
+      <br><br>
 
-      <!--
-      <div style="margin-top:10px"><button id="infoButton" class="button-outline-menu info">Get session information</button></div>
-      -->
+      <p style="color: skyblue;">Connect Wallet & Sign-in with Ethereum to accept compute request</p>
+      <div style="margin-top:-5px; margin-left:'auto'; margin-right:0px;"><button id="connectWalletButton" class="button-outline-menu connect">Connect wallet</button></div>
+
+      <div style="margin-top:5px; margin-left:'auto'; margin-right:0px;"><button id="siweButton" class="button-outline-menu siwe">Sign-in with <img class="thumbnailsiwe" src="./siwe.png"></button></div>
       <br><br>
       <div class="hidden" id="welcome">
       </div>
@@ -53,8 +59,10 @@
         </div></center>
       </div>
       <div class="hidden" id="noProfile">
-        Why you have no ENS profile?
-      </div><br><br><br><br>
+      </div>
+      <br>
+      <div class="hidden" id="simJob"></div>
+      <br><br><br><br><br><br><br><br><br><br><br>
       <div style="margin-right:180px">
       <div class="thumbnailtwitter">
         <a style="white-space:nowrap;" href="https://twitter.com/gsissh_matrix" target="_" ><img src="./twitter.png"><span style="font-size: 14px; font-family: 'SF-Pro';color: grey; margin-bottom:-10px;"> @gsissh_matrix</span></a>
@@ -67,7 +75,7 @@
       <div class="thumbnailgit">
         <a style="white-space:nowrap;" href="https://github.com/sshmatrix/0xbots" target="_" ><img src="./github.png"><span style="font-size: 14px; margin-left: 2px; font-family: 'SF-Pro';color: grey; margin-bottom:-10px;"> github.com/sshmatrix</span></a>
       </div><br>
-    </div>
+    </div><br>
     </div>
   </div>
 </body>

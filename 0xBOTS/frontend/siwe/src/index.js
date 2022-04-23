@@ -9,6 +9,8 @@ const signer = provider.getSigner();
 const profileElm = document.getElementById('profile');
 const noProfileElm = document.getElementById('noProfile');
 const welcomeElm = document.getElementById('welcome');
+const genJobElm = document.getElementById('genJob');
+const simJobElm = document.getElementById('simJob');
 
 const ensLoaderElm = document.getElementById('ensLoader');
 const ensContainerElm = document.getElementById('ensContainer');
@@ -18,6 +20,7 @@ const ensAddress = "https://api.thegraph.com/subgraphs/name/ensdomains/ens";
 const tablePrefix = `<tr><th> </th><th> </th></tr>`;
 
 let address;
+let randStr;
 
 const BACKEND_ADDR = require('Config').serverUrl;
 
@@ -25,6 +28,8 @@ async function createSiweMessage(address, statement) {
     const res = await fetch(BACKEND_ADDR + '/nonce', {
         credentials: 'include',
     });
+    const nonce = await res.text();
+
     const message = new SiweMessage({
         domain,
         address,
@@ -32,7 +37,7 @@ async function createSiweMessage(address, statement) {
         uri: origin,
         version: '1',
         chainId: '1',
-        nonce: await res.text()
+        nonce: nonce
     });
     return message.prepareMessage();
 }
@@ -88,6 +93,7 @@ async function signInWithEthereum() {
     profileElm.classList = 'hidden';
     noProfileElm.classList = 'hidden';
     welcomeElm.classList = 'hidden';
+    simJobElm.classList = 'hidden';
 
     address = await signer.getAddress()
     const message = await createSiweMessage(
@@ -110,9 +116,8 @@ async function signInWithEthereum() {
         console.error(`Failed in getInformation: ${res.statusText}`);
         return
     }
-    console.log(await res.text());
-
-    displayENSProfile();
+    let result = await res.text();
+    displayENSProfile(result);
 }
 
 async function getInformation() {
@@ -126,12 +131,35 @@ async function getInformation() {
     }
 
     let result = await res.text();
-    console.log(result);
+
     address = result.split(" ")[result.split(" ").length - 1];
     displayENSProfile();
 }
 
-async function displayENSProfile() {
+async function genJob() {
+    genJobElm.classList = 'hidden';
+    var message = document.getElementById('userdata').value;
+    const res = await fetch(BACKEND_ADDR + '/write', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message }),
+        credentials: 'include',
+    });
+    if (!res.ok) {
+        console.error('⨉ Failed to generate job ⨉⨉⨉');
+        genJobElm.classList = '';
+        genJobElm.innerHTML = '⨉ Failed to generate job ⨉⨉⨉';
+    } else {
+        let randStr = await res.text();
+        console.log('✓ Successfully generated job with nonce ' + randStr + ' ↓↓↓');
+        genJobElm.classList = '';
+        genJobElm.innerHTML = '✓ Successfully generated job with nonce ' + randStr + ' ↓↓↓';
+    }
+}
+
+async function displayENSProfile(arg) {
     const ensName = await provider.lookupAddress(address);
 
     if (ensName) {
@@ -151,13 +179,16 @@ async function displayENSProfile() {
         welcomeElm.innerHTML = `Hello, ${address}`;
         noProfileElm.classList = '';
     }
-
+    simJobElm.classList = '';
+    simJobElm.innerHTML = arg;
     welcomeElm.classList = '';
 }
 
 const connectWalletButton = document.getElementById('connectWalletButton');
+const genJobButton = document.getElementById('genJobButton');
 const siweButton = document.getElementById('siweButton');
 const infoButton = document.getElementById('infoButton');
 connectWalletButton.onclick = connectWallet;
+genJobButton.onclick = genJob;
 siweButton.onclick = signInWithEthereum;
 infoButton.onclick = getInformation;

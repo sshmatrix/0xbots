@@ -1,5 +1,7 @@
 # 0xBOTS
 
+[web3 mirror](https://0xbots.eth.limo), [web2 mirror](https://work.inpl.one), 
+
 **0xBOTS.eth** is an ENS-mediated protocol that enables web2 & web3 frontends to have lightweight compute-enabled distributed backends.
 
 <img src="https://ipfs.io/ipfs/QmRXnJ67VeSqgmBzBcparCow4NTAw3feQy5oeLFaQ8WUG2?filename=0xbotsTrans.png" alt="drawing" width="200"/>

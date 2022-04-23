@@ -1,0 +1,1 @@
+{"status":"OK","callback":"https://ln.tips/.well-known/lnurlp/sshmatrix","tag":"payRequest","maxSendable":100000000,"minSendable":1000,"metadata":"[[\"text/identifier\", \"sshmatrix@ln.tips\"], [\"text/plain\", \"LN-BTC to 0xBOTS.eth\"]]","commentAllowed":500}
