@@ -1,6 +1,6 @@
 # 0xBOTS
 
-[web3 mirror](https://0xbots.eth.limo), [web2 mirror](https://work.inpl.one), 
+[web3 mirror](https://0xbots.eth.limo) | [web2 mirror](https://work.inpl.one)
 
 **0xBOTS.eth** is an ENS-mediated protocol that enables web2 & web3 frontends to have lightweight compute-enabled distributed backends.
 
@@ -33,3 +33,4 @@ e) a flag (not a necessity but helpful for state verification).
 [1] Integration Check: It refers to validating the computation by pre- or post-computing a small random subset of the computation to match against the incoming results from the computation provider 0xBOTS.eth
 
 *Used technologies:* IPFS/IPNS, BOINC, SIWE, ENS, Metamask, LN-BTC.
+*Demo mirrors:* [0xbots.eth.limo](https://0xbots.eth.limo) | [work.inpl.one](https://work.inpl.one)
