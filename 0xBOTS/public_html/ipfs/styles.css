@@ -9,7 +9,7 @@
 }
 
 .app-logo {
-  background-image: url('https://ipfs.io/ipfs/QmYfwj3uRzwH9ih2VMFtbUD9tGmZBSN4aQyXFAmswWLHpv');
+  background-image: url('https://ipfs.io/ipfs/QmRXnJ67VeSqgmBzBcparCow4NTAw3feQy5oeLFaQ8WUG2');
   height: 150px;
   pointer-events: none;
   background-repeat: no-repeat;
@@ -995,6 +995,9 @@ hr {
 body {
 	margin: 0;
 	font-family: 'Rajdhani';
+  padding-bottom: 300px;
+  background-color: #000000;
+  background-repeat: repeat-y;
 }
 #navigation {
 	position: fixed;
