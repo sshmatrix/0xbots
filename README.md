@@ -21,10 +21,15 @@ Imagine this...
 **Supply side:** One entity identified by [0xBOTS.eth](https://0xbots.eth.limo/) has compute resources in form of CPU or GPU idle time on a number of big and small devices ranging from servers to smartphones. 0xBOTS.eth is able to manage the compute resources on its devices using a BOINC (Berkeley Open Infrastructure for Network Computing) build residing on its centralised server. 0xBOTS.eth arranges the architecture in a way that [0xBOTS.eth.limo](https://0xbots.eth.limo/) resolves to the frontend of the BOINC server. Moreover, subdomains `*.0xBOTS.eth` map to as many devices as managed by the BOINC server. This mapping has no strict architecture and it is optimisable as a function of types of managed devices. [0xBOTS.eth.limo](https://0xbots.eth.limo/) now searches on the web for opportunity to compute, hopefully in return for some cheap $ETH on L2 💎, or in this case, $BTC on Lightning Network ⚡️[🤣]. 
 
 **Demand side:** A [website.xyz](https://stdout.eth.limo) (web2 or web3) requires resources in form of compute time. It broadcasts a request for computation via the `.well-known` URI or equivalent located at `https://website.xyz/.well-known/`. In the broadcast JSON, metadata provides,
+
 a) the URI of the code to execute,
+
 b) arguments required by the code, 
+
 c) [website.xyz](https://stdout.eth.limo)'s backend URI `website.xyz/` for `POST`, `GET` requests (`website.xyz/nonce`, for example),
+
 d) a random key string `STR` to associate to the request, and 
+
 e) a flag (not a necessity but helpful for state verification).
 
 
@@ -33,4 +38,5 @@ e) a flag (not a necessity but helpful for state verification).
 [1] Integration Check: It refers to validating the computation by pre- or post-computing a small random subset of the computation to match against the incoming results from the computation provider 0xBOTS.eth
 
 *Used technologies:* IPFS/IPNS, BOINC, SIWE, ENS, Metamask, LN-BTC.
+
 *Demo mirrors:* [0xbots.eth.limo](https://0xbots.eth.limo) | [work.inpl.one](https://work.inpl.one)
